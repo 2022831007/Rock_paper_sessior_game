@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - CV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #007bff;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .contact-info {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .date {
+            float: right;
+            font-style: italic;
+            color: #666;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill {
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; margin: 0; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>John Doe</h1>
+            <p class="contact-info">
+                Software Engineer | <a href="mailto:john.doe@email.com">john.doe@email.com</a> | 
+                +1 (123) 456-7890 | 
+                <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | 
+                New York, NY
+            </p>
+        </header>
+
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Passionate software engineer with 5+ years of experience in full-stack development. 
+                Skilled in building scalable web applications using modern technologies. 
+                Proven track record of delivering high-quality code and leading successful projects.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <span class="job-title">Senior Software Engineer</span> - Tech Company Inc.
+                    <span class="date">2022 - Present</span>
+                    <br>
+                    <ul>
+                        <li>Led development of microservices architecture serving millions of users.</li>
+                        <li>Improved application performance by 40% through optimization techniques.</li>
+                        <li>Mentored junior developers and conducted code reviews.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="job-title">Full-Stack Developer</span> - Startup XYZ
+                    <span class="date">2019 - 2022</span>
+                    <br>
+                    <ul>
+                        <li>Built responsive web applications using React and Node.js.</li>
+                        <li>Integrated third-party APIs and payment systems.</li>
+                        <li>Collaborated with designers to implement pixel-perfect UIs.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <span class="job-title">Bachelor of Science in Computer Science</span>
+                    <span class="date">2015 - 2019</span>
+                    <br>
+                    University of Example, GPA: 3.8/4.0
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Git</span>
+                <span class="skill">Docker</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

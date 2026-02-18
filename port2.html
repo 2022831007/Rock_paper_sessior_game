@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fatema | Colorful Animated CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#e0e7ff,#fce7f3);
+      color:#1f2937;
+      font-size:14px;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(40px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    @keyframes loadBar{
+      from{width:0;}
+      to{width:var(--level);}
+    }
+
+    /* ===== Header ===== */
+    .top{
+      text-align:center;
+      padding:30px 15px;
+      background: linear-gradient(135deg,#6366f1,#ec4899);
+      color:white;
+      animation: fadeUp 1s ease;
+    }
+
+    .top h1{
+      font-size:36px;
+      letter-spacing:1px;
+    }
+
+    .top p{
+      margin-top:8px;
+      opacity:0.9;
+    }
+
+    /* ===== Layout ===== */
+    .container{
+      max-width:1100px;
+      margin:20px auto;
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:20px;
+      padding:0 15px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .left,.right{
+      background:#ffffff;
+      border-radius:14px;
+      padding:25px;
+      box-shadow:0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    /* ===== Section ===== */
+    .section{
+      margin-bottom:18px;
+    }
+
+    .section h2{
+      font-size:20px;
+      margin-bottom:12px;
+      background: linear-gradient(90deg,#6366f1,#ec4899);
+      -webkit-background-clip:text;
+      color:transparent;
+      border-left:5px solid #6366f1;
+      padding-left:10px;
+    }
+
+    p,li{
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    ul{padding-left:18px;}
+
+    /* ===== Skills ===== */
+    .skill{margin-bottom:14px;}
+
+    .skill span{font-weight:600;}
+
+    .bar{
+      height:10px;
+      background:#e5e7eb;
+      border-radius:20px;
+      margin-top:6px;
+      overflow:hidden;
+    }
+
+    .bar div{
+      height:100%;
+      width:0;
+      background: linear-gradient(90deg,#6366f1,#ec4899);
+      border-radius:20px;
+      animation: loadBar 1.8s forwards;
+    }
+
+    /* ===== Projects ===== */
+    .project{
+      background: linear-gradient(135deg,#eef2ff,#fdf2f8);
+      padding:14px;
+      border-left:5px solid #ec4899;
+      border-radius:10px;
+      margin-bottom:14px;
+      transition:0.3s;
+    }
+
+    .project:hover{
+      transform:translateY(-4px) scale(1.02);
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Contact ===== */
+    .contact p{
+      margin-bottom:8px;
+      word-break: break-all;
+    }
+
+    .contact span{
+      font-weight:bold;
+      color:#6366f1;
+    }
+
+    /* ===== Footer ===== */
+    .footer{
+      text-align:center;
+      padding:10px;
+      color:#374151;
+      font-size:12px;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width:768px){
+      .container{grid-template-columns:1fr;}
+    }
+
+    /* ===== FORCE ONE PAGE PRINT ===== */
+    @media print{
+      body{
+        background:white;
+      }
+      .top{
+        padding:15px 10px;
+      }
+      .container{
+        margin:0;
+        padding:0;
+        grid-template-columns:1fr 1.5fr;
+        gap:10px;
+      }
+      .left,.right{
+        padding:15px;
+        box-shadow:none;
+      }
+      .section{
+        margin-bottom:10px;
+      }
+      p,li{
+        font-size:12px;
+        line-height:1.4;
+      }
+      .footer{
+        display:none;
+      }
+      img{
+        width:120px !important;
+        height:120px !important;
+      }
+    }
+    
+
+  </style>
+</head>
+<body>
+
+<div class="top">
+  <h1>Fatema</h1>
+  <p>Software Engineering Student | Web & OOP Enthusiast</p>
+</div>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <!-- PROFILE -->
+    <div class="section" style="text-align:center;">
+      <img src="profile.jpg" alt="Profile Picture" style="width:200px;height:200px;border-radius:50%;object-fit:cover;border:7px solid #ec4899;box-shadow:0 15px 30px rgba(0,0,0,0.3);margin-bottom:14px;">
+      <h3 style="margin-bottom:6px;font-size:20px;">Fatema</h3>
+      <p style="font-size:14px;color:#6366f1;font-weight:bold;">
+        <span class="typing">Software Engineering Student</span>
+      </p>
+      <p style="font-size:13px;color:#555;margin-top:4px;">Lifelong Learner</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p><strong>📞</strong> +8801XXXXXXXXX</p>
+      <p><strong>📧</strong> yourmail@gmail.com</p>
+      <p><strong>💼</strong> linkedin.com/in/yourid</p>
+      <p><strong>🐙</strong> github.com/yourid</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skill"><span>HTML & CSS</span><div class="bar"><div style="--level:90%"></div></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar"><div style="--level:75%"></div></div></div>
+      <div class="skill"><span>Java (OOP)</span><div class="bar"><div style="--level:70%"></div></div></div>
+      <div class="skill"><span>C / C++</span><div class="bar"><div style="--level:65%"></div></div></div>
+    </div>
+
+    <!-- CP -->
+    <div class="section">
+      <h2>Competitive Programming</h2>
+      <ul>
+        <li>Codeforces Rating: 1009</li>
+        <li>Problems Solved: 400+</li>
+      </ul>
+    </div>
+
+  </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+
+      <div class="skill"><span>HTML & CSS</span><div class="bar"><div style="--level:90%"></div></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar"><div style="--level:75%"></div></div></div>
+      <div class="skill"><span>Java (OOP)</span><div class="bar"><div style="--level:70%"></div></div></div>
+      <div class="skill"><span>C / C++</span><div class="bar"><div style="--level:65%"></div></div></div>
+
+    </div>
+
+    <div class="section">
+      <h2>Competitive Programming</h2>
+      <ul>
+        <li>Codeforces Rating: 1009</li>
+        <li>Problems Solved: 400+</li>
+      </ul>
+    </div>
+
+    <div class="section contact">
+      <h2>Contact Me</h2>
+      <p><span>📞 Mobile:</span> +8801XXXXXXXXX</p>
+      <p><span>📧 Email:</span> yourmail@gmail.com</p>
+      <p><span>💼 LinkedIn:</span> linkedin.com/in/yourid</p>
+      <p><span>🐙 GitHub:</span> github.com/yourid</p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <!-- ABOUT -->
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a 3rd year Software Engineering student at Shahjalal University of Science and Technology.
+        I enjoy building colorful web projects and simple games using HTML, CSS, JavaScript, Java OOP, and C++.
+        I have also solved 400+ problems on Codeforces.
+      </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2>Projects</h2>
+      <div class="project">Rock Paper Scissors – HTML, CSS, JavaScript</div>
+      <div class="project">Tic Tac Toe – Java (OOP)</div>
+      <div class="project">Tic Tac Toe – HTML, CSS, JavaScript</div>
+      <div class="project">Google Form Clone – HTML, CSS, JavaScript</div>
+      <div class="project">BookBuddies App – HTML, CSS, JavaScript, Firebase</div>
+      <div class="project">Snake Game – C++ and SDL</div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BSc in Software Engineering</strong><br>Shahjalal University of Science and Technology<br>3rd Year</li>
+        <li><strong>HSC (2022)</strong> – Sherpur Govt. College – GPA 5.00</li>
+        <li><strong>SSC (2020)</strong> – Sherpur Govt. Girls High School – GPA 5.00</li>
+      </ul>
+    </div>
+
+  </div>
+      <div class="project">Tic Tac Toe – Java (OOP)</div>
+      <div class="project">Tic Tac Toe – HTML, CSS, JavaScript</div>
+      <div class="project">Google Form Clone – HTML, CSS, JavaScript</div>
+      <div class="project">BookBuddies App – HTML, CSS, JavaScript, Firebase</div>
+      <div class="project">Snake Game – C++ and SDL</div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BSc in Software Engineering</strong><br>Shahjalal University of Science and Technology<br>3rd Year</li>
+        <li><strong>HSC (2022)</strong><br>Sherpur Govt. College<br>GPA: 5.00</li>
+        <li><strong>SSC (2020)</strong><br>Sherpur Govt. Girls High School<br>GPA: 5.00</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">© 2026 Fatema | Colorful Animated CV</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="RockPaper.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="players">
+        <div>
+            <p>Player</p>
+            <div id="playerHand">✊</div>
+        </div>
+
+        <p class="vs">v/s</p>
+
+        <div>
+            <p>Computer</p>
+            <div id="computerHand">✊</div>
+        </div>
+    </div>
+
+    <h2 id="result">Make your move!</h2>
+
+    <div class="buttons">
+        <button onclick="play('rock')">✊ Rock</button>
+        <button onclick="play('paper')">✋ Paper</button>
+        <button onclick="play('scissors')">✌ Scissors</button>
+    </div>
+
+    <button class="reset" onclick="resetGame()">🔁 Play Again</button>
+
+    <div class="score">
+        <span>Won: <span id="won">0</span></span>
+        <span>Lost: <span id="lost">0</span></span>
+        <span>Draw: <span id="draw">0</span></span>
+    </div>
+</div>
+
+<script src="RockPaper.js"></script>
+</body>
+</html>
